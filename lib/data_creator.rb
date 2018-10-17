@@ -10,7 +10,7 @@ class DatabaseCreator
   def self.create_tables
     connection = PG.connect(dbname: 'clients')
     connection.exec('CREATE TABLE client_details (
-                    Company_ID int,
+                    Company_ID SERIAL PRIMARY KEY,
                     Company_Name varchar,
                     Company_Telephone varchar,
                     Company_Representitive varchar,
@@ -20,9 +20,9 @@ class DatabaseCreator
                     Company_Contract_End_Date varchar
                     )')
     connection = PG.connect(dbname: 'clients')
-    connection.exec('CREATE TABLE orders_summary (
+    connection.exec('CREATE TABLE all_orders_summary (
+                    Summary_ID SERIAL PRIMARY KEY,
                     Company_ID int,
-                    Summary_ID int,
                     Company_Name varchar,
                     Number_Of_Orders int,
                     Total_Revenue int,
@@ -31,7 +31,7 @@ class DatabaseCreator
                     )')
     connection = PG.connect(dbname: 'clients')
     connection.exec('CREATE TABLE orders (
-                    Row_ID int,
+                    Row_ID SERIAL PRIMARY KEY,
                     Company_ID int,
                     Company_Name varchar,
                     Product_Reference int,
