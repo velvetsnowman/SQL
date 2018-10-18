@@ -1,0 +1,45 @@
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+</head>
+
+<h2>Data</h2>
+<table>
+  <tr>
+    <th>Company ID</th>
+    <th>Company Name</th>
+    <th>Company Telephone</th>
+    <th>Company representitive</th>
+    <th>Company email</th>
+    <th>Company address</th>
+    <th>Contract Start</th>
+    <th>Contract End</th>
+  </tr>
+  <% @company_sets.each do |set| %>
+    <tr>
+      <td><%= set.id %></td>
+      <td><%= set.name %></td>
+      <td><%= set.telephone %></td>
+      <td><%= set.representitive %></td>
+      <td><%= set.email %></td>
+      <td><%= set.address %></td>
+      <td><%= set.start_date %></td>
+      <td><%= set.end_date %></td>
+    </tr>
+  <% end %>
+</table>
+
+<form action="/" method="get">
+<input type="submit" value="HIHIHI">
+</form>
