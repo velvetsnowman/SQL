@@ -6,7 +6,7 @@ class DataGenerator
   @company_telephone = ['034569810', '579456345', '568956845', '963342234', '456789653']
   @company_representitive = ['Sarah Marcial', 'Daina Mirza', 'Rebecca Cones', 'Mike Trent', 'Josh Dimario']
   @company_email = ['monoprixadmin@monoprix.com', 'superzmarket@gmail.com', 'a2z@alphabetmarket.com', 'carrefour@carrefour.com', 'asdacompany@gmail.com']
-  @company_address = ['a', 'b', 'c', 'd', 'e']
+  @company_address = ['23 Grand Avenue, E673 YU7', '45 Loren Avenue, E543 W3W', '7 Hubery Boulevard, SW78 6T5', '5 Dorrick Road Avenue, R567 G78', '32 Docoester Street, TV56 675']
   @contract_start = ['01/01/2015', '01/08/2009', '10/02/2014', '31/05/2016', '23/08/2015']
   @contract_end = ['01/01/2017', '01/08/2019', '10/02/2017', '31/05/2019', '23/08/2018']
 
