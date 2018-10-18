@@ -17,16 +17,15 @@ td, th {
 <h2>Data</h2>
 <table>
   <tr>
+    <th>Summary ID</th>
     <th>Company ID</th>
     <th>Company Name</th>
+    <th>Total Number of Orders</th>
+    <th>Total Revenue Generated</th>
     <th>Company Telephone</th>
-    <th>Company representitive</th>
-    <th>Company email</th>
-    <th>Company address</th>
-    <th>Contract Start</th>
-    <th>Contract End</th>
+    <th>Company Email</th>
   </tr>
-  <% @company_sets.each do |set| %>
+  <% @order_summaries.each do |set| %>
     <tr>
       <td><%= set.id %></td>
       <td><%= set.name %></td>
@@ -40,6 +39,6 @@ td, th {
   <% end %>
 </table>
 
-<form action="/order_summary" method="get">
+<form action="/" method="get">
 <input type="submit" value="HIHIHI">
 </form>
