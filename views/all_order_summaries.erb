@@ -27,14 +27,13 @@ td, th {
   </tr>
   <% @order_summaries.each do |set| %>
     <tr>
-      <td><%= set.id %></td>
-      <td><%= set.name %></td>
-      <td><%= set.telephone %></td>
-      <td><%= set.representitive %></td>
-      <td><%= set.email %></td>
-      <td><%= set.address %></td>
-      <td><%= set.start_date %></td>
-      <td><%= set.end_date %></td>
+      <td><%= set.summary_id %></td>
+      <td><%= set.company_id %></td>
+      <td><%= set.company_name %></td>
+      <td><%= set.number_of_orders %></td>
+      <td><%= set.total_revenue %></td>
+      <td><%= set.company_telephone %></td>
+      <td><%= set.company_email %></td>
     </tr>
   <% end %>
 </table>

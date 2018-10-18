@@ -2,7 +2,7 @@ require 'pg'
 
 class AllOrdersSummary
   attr_reader :summary_id,:company_id,:company_name,:number_of_orders,:total_revenue,:company_telephone,:company_email
-  def inititalize(summary_id,company_id,company_name,number_of_orders,total_revenue,company_telephone,company_email)
+  def initialize(summary_id,company_id,company_name,number_of_orders,total_revenue,company_telephone,company_email)
     @summary_id = summary_id
     @company_id = company_id
     @company_name = company_name
@@ -21,6 +21,6 @@ class AllOrdersSummary
                                             row['number_of_orders'],
                                             row['total_revenue'],
                                             row['company_telephone'],
-                                            row['company_email'],)}
+                                            row['company_email'])}
   end
 end
