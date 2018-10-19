@@ -32,16 +32,32 @@ class DatabaseCreator
     connection = PG.connect(dbname: 'clients')
     connection.exec('CREATE TABLE orders (
                     Row_ID SERIAL PRIMARY KEY,
+                    order_id varchar,
                     Company_ID int,
                     Company_Name varchar,
-                    Product_Reference int,
+                    Product_ID int,
                     Quantity int,
                     Ordered_On_Date text,
                     Delivery_Date text,
-                    Total_Revenue int,
-                    Company_Telephone varchar,
-                    Company_Email varchar
+                    Total_Revenue int
                     )')
+      connection = PG.connect(dbname: 'clients')
+      connection.exec('CREATE TABLE users (
+                      User_ID SERIAL PRIMARY KEY,
+                      Company_ID int,
+                      Company_Name varchar,
+                      Company_Telephone varchar,
+                      Company_Email varchar,
+                      Password varchar,
+                      Username varchar
+                      )')
+        connection = PG.connect(dbname: 'clients')
+        connection.exec('CREATE TABLE products (
+                        Product_ID SERIAL PRIMARY KEY,
+                        Product_Name varchar,
+                        gross_sale_cost int,
+                        distribution_price int
+                        )')
   end
 end
 DatabaseCreator.create_database

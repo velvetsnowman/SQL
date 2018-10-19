@@ -18,10 +18,10 @@ class Router < Sinatra::Base
   get '/add_new_company' do
     erb(:form_for_new_company)
   end
-
   post '/add_new_company' do
     Company.add_company(params['name'],params['telephone'],params['representitive'],params['email'],params['address'],params['start'],params['end'])
     redirect '/'
   end
+  
 
 end
