@@ -52,7 +52,7 @@ class DatabaseCreator
                       Username varchar
                       )')
         connection = PG.connect(dbname: 'clients')
-        connection.exec('CREATE TABLE products (
+        connection.exec('CREATE TABLE product_values (
                         Product_ID SERIAL PRIMARY KEY,
                         Product_Name varchar,
                         gross_sale_cost int,

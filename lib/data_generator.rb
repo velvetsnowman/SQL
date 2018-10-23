@@ -97,7 +97,7 @@ class DataGenerator
                         '#{@company_email[i]}',
                         '#{@password[i]}',
                         '#{@user_name[i]}');")
-      connection.exec("INSERT INTO products (
+      connection.exec("INSERT INTO product_values (
                       Product_Name,
                       gross_sale_cost,
                       distribution_price)

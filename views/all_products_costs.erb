@@ -1,0 +1,37 @@
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+</head>
+
+<h2>Costs and Prices For Poducts</h2>
+<table>
+  <tr>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Gross Sale Cost</th>
+    <th>Distribution Cost</th>
+  </tr>
+  <% @products.each do |set| %>
+    <tr>
+      <td><%= set.product_id %></td>
+      <td><%= set.product_name %></td>
+      <td><%= set.gross_sale_cost %></td>
+      <td><%= set.distribution_price %></td>
+    </tr>
+  <% end %>
+</table>
+
+<form action="/" method="get">
+<input type="submit" value="HIHIHI">
+</form>
